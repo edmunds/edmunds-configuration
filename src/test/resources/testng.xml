@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="common" annotations="JDK" time-out="2000">
+    <test name="common" verbose="9" annotations="JDK" time-out="2000">
+        <packages>
+            <package name="com.edmunds.common.configuration.api"/>
+        </packages>
+    </test>
+</suite>
