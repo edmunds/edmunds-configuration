@@ -16,7 +16,6 @@
 package com.edmunds.common.configuration.dns;
 
 import org.apache.log4j.Logger;
-import org.springframework.stereotype.Component;
 
 import javax.naming.NamingException;
 import javax.naming.directory.Attribute;
@@ -30,7 +29,6 @@ import java.util.Hashtable;
  * <p/>
  * Copyright (C) 2010 Edmunds.com
  */
-@Component
 class DNSConfigurationEntryReader implements ConfigurationEntryReader {
     /**
      * Logger for this class.
