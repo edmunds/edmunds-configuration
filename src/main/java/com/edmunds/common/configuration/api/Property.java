@@ -16,9 +16,44 @@
 package com.edmunds.common.configuration.api;
 
 /**
- * Temporary hack to maintain backward compatibility.
+ * This class can be used as a Spring Bean with a single property that can be defined in the XML and be overriden via
+ * our standard configuration mechanisms.
  * <p/>
  * Copyright (C) 2009 Edmunds.com
+ * <p/>
+ * Date: May 13, 2009:10:28:33 AM
+ *
+ * @author Eric Gramond
  */
-public class Property extends com.edmunds.common.config.Property {
+public class Property {
+
+    /**
+     * The property value being held by this Object.
+     */
+    private String property;
+
+    /**
+     * Gets the property value being held by this Object.
+     *
+     * @return the property value being held by this Object.
+     */
+    public String getProperty() {
+        return property;
+    }
+
+    /**
+     * Sets the property value being held by this Object.
+     *
+     * @param property the property value being held by this Object.
+     */
+    public void setProperty(String property) {
+        this.property = property;
+    }
+
+    /**
+     * Outputs the property value.
+     */
+    public String toString() {
+        return property;
+    }
 }

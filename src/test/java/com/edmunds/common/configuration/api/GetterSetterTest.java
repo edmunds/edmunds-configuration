@@ -33,6 +33,5 @@ public class GetterSetterTest {
     @Test
     public void testAll() {
         new AutoTestGetterSetter(null, "com.edmunds.common.configuration.api").validateAll();
-        new AutoTestGetterSetter(null, "com.edmunds.common.config").validateAll();
     }
 }

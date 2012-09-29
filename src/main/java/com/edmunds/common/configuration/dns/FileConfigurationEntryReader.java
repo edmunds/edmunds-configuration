@@ -88,16 +88,19 @@ public class FileConfigurationEntryReader implements ConfigurationEntryReader {
     }
 
     private Properties getProperties() {
-        if(properties == null) {
+        if (properties == null) {
             properties = new Properties();
-            try {
-                properties.load(new FileReader(PROPERTY_FILE_PATH));
-            } catch(IOException e) {
-                log.error("Cannot read environment properties file", e);
+
+            if (propertiesFileExists()) {
+                try {
+                    properties.load(new FileReader(PROPERTY_FILE_PATH));
+                } catch (IOException e) {
+                    log.error("Cannot read environment properties file", e);
+                }
+            } else {
+                log.error("Environment properties file does not exist: " + PROPERTY_FILE_PATH);
             }
         }
         return properties;
     }
-
-
 }
